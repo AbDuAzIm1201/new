@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency convertor</title>
+    <style>
+        *{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 500;
+        }
+      body {
+        background-color: #00dbde;
+        background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+      }
+      .wrapper {
+        border:  1px solid gray;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+    
+        width: fit-content;
+        height: 200px;
+        margin: 100px auto;
+        padding: 40px;
+        border-radius: 10px;
+      
+}
+
+.text{
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-bottom: 20px;
+    /* width: 100%; */
+}
+
+select{
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.selects{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    width: 100%;
+      padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+transition: 0.3s ease-in-out all;
+}
+.btn:hover{
+  opacity: 0.7;
+  
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1{
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+    font-size: 45px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Currency convertor</h1>
+    <div class="wrapper">
+      <input type="text" class="text"  />
+      <div class="selects">
+        <select class="dan">
+          <option value="uzs">UZS</option>
+          <option value="rubl">RUB</option>
+          <option value="usd">USD</option>
+          <option value="eur">EUR</option>
+        </select>
+        <select class="ga">
+          <option value="rubl">RUB</option>
+          <option value="usd">USD</option>
+          <option value="uzs">UZS</option>
+          <option value="eur">EUR</option>
+        </select>
+      </div>
+      <h2 class="result"></h2>
+      <button class="btn">Qidirish</button>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
